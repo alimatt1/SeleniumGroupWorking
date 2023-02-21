@@ -9,26 +9,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class TestBaseClass {
-    static WebDriver driver;
+    public static WebDriver driver;
+
     @BeforeClass
     public static void setup(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
-        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().window().maximize();
     }
 
     @AfterClass
     public static void teardown(){
-        //driver.close();
-
+        driver.quit();
     }
+    public static void wait(int saniye){
 
-    public void wait(int saniye)  {
         try {
             Thread.sleep(saniye*1000);
         } catch (InterruptedException e) {
 
         }
+
     }
 }

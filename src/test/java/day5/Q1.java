@@ -1,20 +1,16 @@
 package day5;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import utilities.TestBase;
 
-import java.time.Duration;
 import java.util.List;
 
-public class C01 extends TestBase {
+public class Q1 extends TestBase {
     @Test
     public void test01(){
         // amazon adresine git
